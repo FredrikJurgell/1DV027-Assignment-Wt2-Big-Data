@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "8cUKhFekxFK5MrT6AOyzLBQ1J3f8rNFSeZh6TFoxXSAYw861vfs/lHX3p3HCr5y2u/9ExTvKd5HBYz0JiDq6KA==",
+  "success": true,
+  "projectFilePath": "/Users/fredrikjurgell/Documents/skola/1dv027/assignments/assignment-wt2-oauth/assignment-wt2-oauth.csproj",
+  "expectedPackageFiles": [
+    "/Users/fredrikjurgell/.nuget/packages/elasticsearch.net/7.17.5/elasticsearch.net.7.17.5.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/microsoft.csharp/4.6.0/microsoft.csharp.4.6.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/nest/7.17.5/nest.7.17.5.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/restsharp/110.2.0/restsharp.110.2.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/system.diagnostics.diagnosticsource/5.0.0/system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
+    "/Users/fredrikjurgell/.nuget/packages/system.text.json/7.0.2/system.text.json.7.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
