@@ -14,7 +14,7 @@ namespace assignment_wt2_oauth
 
     public async Task AddData(IEnumerable<Data> datas){
 
-            var index = "uhrdata";
+            var index = "imdbdata";
             var batchSize = 200;
             var shiped = 0;
 
