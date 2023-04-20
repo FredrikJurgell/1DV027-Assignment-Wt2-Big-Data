@@ -1,0 +1,39 @@
+{
+  "name": "assignment-wt2-oauth",
+  "version": "1.0.0",
+  "description": "Assignment WT2",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon --inspect -r dotenv/config src/server.js",
+    "lint": "npx eslint ./src || exit 0",
+    "lint:fix": "npx eslint ./src --fix || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.lnu.se:1dv027/student/fj222qp/assignment-wt2-oauth.git"
+  },
+  "author": "Fredrik Jurgell",
+  "license": "ISC",
+  "dependencies": {
+    "@elastic/elasticsearch": "^8.7.0",
+    "chart.js": "^4.2.1",
+    "express": "^4.17.3",
+    "express-hbs": "^2.4.0",
+    "express-session": "^1.17.3",
+    "helmet": "^5.0.2",
+    "http-errors": "^2.0.0",
+    "mongoose": "^6.2.3",
+    "mongoose-lean-virtuals": "^0.9.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.1",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "@lnu/eslint-config": "^1.1.4",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.35.0",
+    "nodemon": "^2.0.15"
+  }
+}
