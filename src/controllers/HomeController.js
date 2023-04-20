@@ -34,7 +34,7 @@ export class HomeController {
         }
       }
 
-      const url = 'https://192.168.1.121:9200/imdbdata/_search'
+      const url = 'https://localhost:9200/imdbdata/_search'
       const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(query),
@@ -48,14 +48,13 @@ export class HomeController {
       const data = await response.json()
       const movies = data.hits.hits
       const genreCount = countGenres(movies)
-      console.log(genreCount)
 
       // Socket.io: Send the created issue to all subscribers.
       res.io.emit('genreCount', {
         genreCount
       })
 
-      res.render('home/index', genreCount)
+      res.render('home/index')
     } catch (error) {
       next(error)
     }
