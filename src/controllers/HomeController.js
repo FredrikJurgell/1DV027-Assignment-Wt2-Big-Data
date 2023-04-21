@@ -49,12 +49,7 @@ export class HomeController {
       const movies = data.hits.hits
       const genreCount = countGenres(movies)
 
-      // Socket.io: Send the created issue to all subscribers.
-      res.io.emit('genreCount', {
-        genreCount
-      })
-
-      res.render('home/index')
+      res.render('home/index', { data: JSON.stringify(genreCount) })
     } catch (error) {
       next(error)
     }
