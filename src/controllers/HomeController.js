@@ -34,7 +34,7 @@ export class HomeController {
         }
       }
 
-      const url = 'https://localhost:9200/imdbdata/_search'
+      const url = `https://${process.env.IP_ADDRESS}:9200/imdbdata/_search`
       const response = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(query),
