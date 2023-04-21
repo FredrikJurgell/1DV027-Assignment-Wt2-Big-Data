@@ -11,8 +11,6 @@ import session from 'express-session'
 import helmet from 'helmet'
 import logger from 'morgan'
 import createError from 'http-errors'
-import { Server } from 'socket.io'
-import http from 'http'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import { router } from './routes/router.js'
@@ -73,18 +71,11 @@ try {
 
   app.use(session(sessionOptions))
 
-  // Socket.io: Add socket.io to the Express project.
-  const server = http.createServer(app)
-  const io = new Server(server)
+  // Parse requests of the content type application/json.
+  app.use(express.json())
 
-  // Socket.io: Log when users connect/disconnect.
-  io.on('connection', (socket) => {
-    console.log('a user connected')
-
-    socket.on('disconnect', () => {
-      console.log('user disconnected')
-    })
-  })
+  // Register routes.
+  app.use('/', router)
 
   // Middleware to be executed before the routes.
   app.use((req, res, next) => {
@@ -96,17 +87,8 @@ try {
     // Pass the base URL to the views.
     res.locals.baseURL = baseURL
 
-    // Socket.io: Add Socket.io to the Response-object to make it available in controllers.
-    res.io = io
-
     next()
   })
-
-  // Parse requests of the content type application/json.
-  app.use(express.json())
-
-  // Register routes.
-  app.use('/', router)
 
   // Error handler.
   app.use(function (err, req, res, next) {
@@ -138,8 +120,7 @@ try {
   })
 
   // Starts the HTTP server listening for connections.
-  // Socket.io: Using server instead of express.
-  server.listen(process.env.PORT, () => {
+  app.listen(process.env.PORT, () => {
     console.log(`Server running at http://localhost:${process.env.PORT}`)
     console.log('Press Ctrl-C to terminate...')
   })
