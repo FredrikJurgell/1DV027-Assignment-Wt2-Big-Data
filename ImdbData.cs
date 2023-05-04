@@ -4,8 +4,15 @@ using CsvHelper;
 
 namespace assignment_wt2_oauth
 {
-  public class ImdbData : IImdbData
+    /// <summary>
+    /// Implements IImdbData interface to provide access to IMDB data.
+    /// </summary>
+    public class ImdbData : IImdbData
     {
+        /// <summary>
+        /// Reads data from a CSV file and returns a list of Data objects.
+        /// </summary>
+        /// <returns>A list of Data objects.</returns>
         public async Task<IEnumerable<Data>> GetData()
         {
             var imdbData = new List<Data>();
@@ -24,6 +31,9 @@ namespace assignment_wt2_oauth
         }
     }
 
+    /// <summary>
+    /// Represents data from the IMDB data set.
+    /// </summary>
     public class Data
     {
         [JsonPropertyName("Poster_Link")]
