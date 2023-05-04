@@ -1,13 +1,14 @@
 namespace assignment_wt2_oauth
 {
-    /**
-        This interface defines the method signature for retrieving data from IMDB.
-    */
+    /// <summary>
+    /// This interface implements the IImdbData interface to provide access to IMDB data.
+    /// </summary>
      public interface IImdbData
     {
-        /**
-            This method retrieves data from IMDB.
-        */
+        /// <summary>
+        /// Retrieves data from IMDB.
+        /// </summary>
+        /// <returns>An asynchronous task that returns an IEnumerable of Data objects.</returns>
         Task<IEnumerable<Data>> GetData();
     }
 }
