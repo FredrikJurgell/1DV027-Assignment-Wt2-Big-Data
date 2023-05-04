@@ -1,5 +1,5 @@
 /*
-This code defines a class AddToElastic that allows to add data to an ElasticSearch index.
+    This code defines a class AddToElastic that allows to add data to an ElasticSearch index.
 */
 using Nest;
 
@@ -9,7 +9,7 @@ namespace assignment_wt2_oauth
     {
     private readonly IElasticClient elasticClient;
     /*
-       AddToElastic constructor takes an IElasticClient instance and sets it to a private variable.
+        AddToElastic constructor takes an IElasticClient instance and sets it to a private variable.
     */
     public AddToElastic(IElasticClient elasticClient)
     {
@@ -17,7 +17,7 @@ namespace assignment_wt2_oauth
     }
 
     /*
-       AddData method allows to add an IEnumerable of Data to an ElasticSearch index and sends the data to ElasticSearch in batches.
+        AddData method allows to add an IEnumerable of Data to an ElasticSearch index and sends the data to ElasticSearch in batches.
     */
     public async Task AddData(IEnumerable<Data> datas){
             var index = "imdbdata";
