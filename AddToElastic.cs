@@ -7,7 +7,8 @@ namespace assignment_wt2_oauth
 {
   public class AddToElastic
     {
-    private readonly IElasticClient elasticClient;/// <summary>
+    private readonly IElasticClient elasticClient;
+        /// <summary>
         /// AddToElastic constructor takes an IElasticClient instance and sets it to a private variable.
         /// </summary>
         /// <param name="elasticClient"></param>
